@@ -1,0 +1,115 @@
+Vibe Coding Session: Team Guide
+Welcome to the Vibe Coding session! This guide provides essential information for all
+attendees, outlining the objectives, team structure, technical requirements, and expected
+deliverables for this hands-on, collaborative experience.
+Each team will be provided with a Google Drive folder for collaboration and document
+sharing. All teams should submit their final documents at the end of the session.
+The Google Drive Folders: Team drive folders link
+Session Overview
+This 90-minute session is designed to explore cross-functional collaboration in an
+accelerated development environment, enhanced by Agentic AI. You will work in
+multi-role teams to co-create a simple working application.
+Team Structure
+Each team will consist of the following roles:
+● Business Analysts (BAs): Responsible for framing requirements in natural
+language.
+● Developers (Devs): Will drive the technical scaffolding and code generation.
+● Quality Assurance (QAs): Will define acceptance criteria and generate AI-assisted
+test cases.
+All team members are encouraged to contribute to every phase of a project, regardless of
+their specific role. This approach allows them to gain a comprehensive understanding of
+project operations and identify opportunities to leverage AI for improved efficiency.
+Minimum team size will be 5.
+Session Goal
+The primary goal is to collaboratively build a workable solution.
+Application Requirements
+Your application should incorporate the following features and technologies:
+● Domain: Link
+● Client: Zone24x7
+● Architecture: Web-based solution.
+● Authentication: Add login/logout functionality.
+● Navigation: Side menu for page navigation.
+● User Management: User management features are an added advantage.
+● Database: Local database (SQLite).
+● Frontend: Vue.js or React.js. (Recommended and feel free to use your own stack)
+● Backend: Node.js with Express.js Framework. (Recommended and feel free to use
+your own stack)
+● Deployment: Docker Compose File. (Optional)
+Expected Outcomes
+By the end of the session, each team is expected to produce the following artifacts:
+Requirements/Design Phase (25 minutes)
+Deliverable Description
+Scope & Requirement Document Outlines the selected scope and what
+requirements will be expanded and
+implemented. Create detailed descriptions of
+what needs to be built so the team can follow
+them.
+DAR Document Documents the decision analysis and
+resolution process.
+Design Document & Agentic AI Rules Set High-level and detailed design specifications.
+Database schema or ER diagram
+Development Phase (30 minutes)
+Deliverable Description
+Application Code and Unit Testing The functional application code, including unit
+tests.
+API Spec Documentation / Postman
+Collection
+Documentation for all APIs developed.
+Deployment Plan (Optional) Plan for deploying the application.
+QA Phase (20 minutes)
+Deliverable Description
+Test Design Overall test strategy and design.
+Test Case Detailed test cases for the defined
+requirements.
+QA Report (Optional) QA test execution report
+Client Demo (5 minutes)
+Deliverable Description
+Introduction Quick introduction for the selected scope or
+requirement in high-level terms.
+Client Demonstration Show a demonstration of the working
+prototype.
+Session Flow
+1. Team Formation: Teams will be divided, ensuring each has BAs, Devs, and QAs.
+2. Quick Demo / Instruction: An optional quick demo on generating rules and
+creating workflows with AI tools.
+3. High-Level Requirement Explanation: The challenge and high-level requirements
+will be explained.
+4. Hands-on Tasks:
+○ Generate the Scope Document, Requirements document, and DAR.
+○ Estimation and task breakdown (whole team).
+○ Generate Design, DB schema, Project Structure, Code, and Unit Tests.
+○ Generate QA Test Design, Test Cases, and Test Data for the requirement.
+○ Generate a Deployment Plan and a Deployment Script.
+5. Review: Review the AI-generated Design, Document, and Code.
+6. Demonstration and Discussion: Randomly selected teams will present their
+outcomes, followed by a discussion on time, speed, accuracy, review processes,
+security, debugging, and bug fixes.
+Tips
+● Embrace AI: Leverage AI tools to automate repetitive tasks, generate initial code
+structures, assist with documentation, and even perform research to create requirements
+and subsequent designs.
+● Collaborate Actively: Communicate frequently within your team, share ideas, and
+provide constructive feedback.
+● Prioritize Features: Focus on implementing core functionalities first to ensure a
+workable prototype by the session's end.
+● Time Management: Adhere to the time allocations for each phase to ensure all
+deliverables are addressed.
+● Review and Refine: Don't just accept AI-generated content; review and refine it to
+ensure accuracy and alignment with requirements.
+● Parallel Development: Work across different project phases in parallel, delivering
+minimal viable products first to enable teammates to work on their respective areas.
+● Refer to our previous guides: If you feel like you need some references on how to
+write better prompts, see: Hands-On Multi-Role Challenge Prompts (9th Sep 2025)
+FAQ
+● Should we integrate a payment gateway? No, direct payment gateway integration
+is not required for this session.
+● What tools should we use for AI assistance? You are encouraged to use any AI
+tools you are familiar with that can assist in code generation, document creation, or
+test case generation.
+● Do we need to deploy the application? No, a full deployment of the application is
+not expected within the session. The focus is on generating the deployment plan
+and script.
+● Is full database functionality required? While a database schema and design are
+required, full, complex database CRUD operations are not the primary focus.
+Simple data storage and retrieval demonstrations are sufficient.
+We look forward to seeing your innovative solutions and collaborative efforts!

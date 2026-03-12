@@ -1,0 +1,51 @@
+Option 1
+
+Domain: Dating & Friendship
+
+Client Requirement: We want to build a web-based application that allows people to connect with others who share similar interests and preferences. The platform should make it easy for users to create profiles, define their interests, and discover like-minded individuals. Key features should include user registration and profile management, interest-based matching or discovery, and the ability to send and respond to connection requests. The system should also focus on providing a simple, engaging, and secure user experience, with room for future enhancements such as AI-based matching, in-app messaging (enabled after mutual connection), privacy and reporting features, and personalized recommendations.
+
+Scope Consideration:
+1. Objective Setting - specify your purpose of finding a partner
+  Ex: Lifetime partner, just for fun, making new friends, short-term etc.
+2. Profile Creation
+  Ex: Personal Info, Photos, Marital Status and Hobbies
+3. Criteria Setting - specify any essential criteria you want your seeking partner to possess.
+  Ex: Religion, Personal Interests, Education, Age etc
+4. View profiles and percentage wise match against user's requirements.
+5. Ability to send friend/match requests and block requests/profiles
+6. Search and communicate via in-app chat and emailing capabilities with connected profiles.
+
+Future Roadmap (as part of scope but excluded from consideration in this workshop)
+1. Profile verification & mobile support
+2. Safe communication guidelines and ability to report users
+3. Real-time notifications and chat
+4. Matching profiles based on location tracking
+5. In-app video conferencing capabilities
+6. AI-based matching algorithm that considers user preferences, behaviors, and engagement patterns
+7. Subscriptions and payments
+
+Workshop Goal - Create a simple, secure, and user-friendly platform where people can find their best match or build friendships, with scalability to address the future roadmap scope.
+
+
+
+Option 2
+
+Domain: E-Commerce
+
+Client Requirement: We want to build a web-based online shopping application where customers can easily browse our products, view available offers, and place orders with a smooth checkout process. The application should provide a simple and intuitive user experience, with essential features such as a product catalog, shopping cart, and secure payment options. Our main goal is to create a reliable platform that makes online purchasing convenient for our customers while allowing us to manage products, offers, and orders efficiently from the backend.
+
+Scope Consideration:
+1. Product Catalog Management – Add, update, and view products with basic details (name, price, stock).
+2. Offers & Promotions – Showcase discounts and special deals to attract buyers.
+3. Shopping Cart & Checkout – Add/remove products, view totals, and confirm an order.
+4. Order Tracking – Customers can check their order status (Processing, Shipped, Delivered).
+
+Future Roadmap (excluded from this workshop):
+1. AI-driven product recommendations.
+2. Personalized offers & loyalty programs.
+3. Real-time stock updates from suppliers.
+4. Integration with logistics/marketing platforms.
+5. Subscription-based premium features.
+
+Workshop Goal - Create a simple and user-friendly e-commerce platform where customers can browse products, view offers, and place orders, with scalability to support future advanced features.
+
