@@ -1,0 +1,31 @@
+# ── Dependencies ──────────────────────────────────────────────────────────
+node_modules/
+
+# ── Environment (never commit secrets) ────────────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ── Build output ──────────────────────────────────────────────────────────
+dist/
+
+# ── SQLite database files ─────────────────────────────────────────────────
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+
+# ── Prisma generated client (re-generated on install) ─────────────────────
+# node_modules/@prisma/client  ← included in node_modules above
+
+# ── Logs ──────────────────────────────────────────────────────────────────
+*.log
+npm-debug.log*
+
+# ── Test coverage ─────────────────────────────────────────────────────────
+coverage/
+.nyc_output/
+
+# ── OS ────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db

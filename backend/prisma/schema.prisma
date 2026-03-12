@@ -1,0 +1,132 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           Int       @id @default(autoincrement())
+  name         String
+  email        String    @unique
+  passwordHash String    @map("password_hash")
+  role         String    @default("customer")
+  status       String    @default("active")
+  guestTtl     DateTime? @map("guest_ttl")
+  createdAt    DateTime  @default(now()) @map("created_at")
+
+  carts     Cart[]
+  orders    Order[]
+  auditLogs AuditLog[]
+
+  @@map("users")
+}
+
+model Product {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String
+  price       Float
+  stock       Int      @default(0)
+  imageUrl    String   @map("image_url")
+  isActive    Boolean  @default(true) @map("is_active")
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  cartItems  CartItem[]
+  orderItems OrderItem[]
+  offers     Offer[]
+
+  @@map("products")
+}
+
+model Offer {
+  id            Int      @id @default(autoincrement())
+  title         String
+  description   String
+  discountType  String   @map("discount_type")
+  discountValue Float    @map("discount_value")
+  startDate     DateTime @map("start_date")
+  endDate       DateTime @map("end_date")
+  isActive      Boolean  @default(true) @map("is_active")
+  productId     Int      @map("product_id")
+  product       Product  @relation(fields: [productId], references: [id])
+  createdAt     DateTime @default(now()) @map("created_at")
+  updatedAt     DateTime @updatedAt @map("updated_at")
+
+  @@map("offers")
+}
+
+model Cart {
+  id        Int      @id @default(autoincrement())
+  userId    Int?     @map("user_id")
+  user      User?    @relation(fields: [userId], references: [id])
+  status    String   @default("active")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  cartItems CartItem[]
+
+  @@map("carts")
+}
+
+model CartItem {
+  id                Int      @id @default(autoincrement())
+  cartId            Int      @map("cart_id")
+  cart              Cart     @relation(fields: [cartId], references: [id])
+  productId         Int      @map("product_id")
+  product           Product  @relation(fields: [productId], references: [id])
+  quantity          Int
+  unitPriceSnapshot Float    @map("unit_price_snapshot")
+  offerApplied      Boolean  @default(false) @map("offer_applied")
+  discountSnapshot  Float?   @map("discount_snapshot")
+  createdAt         DateTime @default(now()) @map("created_at")
+
+  @@map("cart_items")
+}
+
+model Order {
+  id                  Int      @id @default(autoincrement())
+  userId              Int?     @map("user_id")
+  user                User?    @relation(fields: [userId], references: [id])
+  guestEmail          String?  @map("guest_email")
+  totalAmount         Float    @map("total_amount")
+  status              String   @default("Processing")
+  shippingAddressJson String   @map("shipping_address_json")
+  paymentReference    String   @map("payment_reference")
+  notes               String?
+  placedAt            DateTime @default(now()) @map("placed_at")
+  updatedAt           DateTime @updatedAt @map("updated_at")
+
+  orderItems OrderItem[]
+
+  @@map("orders")
+}
+
+model OrderItem {
+  id                Int     @id @default(autoincrement())
+  orderId           Int     @map("order_id")
+  order             Order   @relation(fields: [orderId], references: [id])
+  productId         Int     @map("product_id")
+  product           Product @relation(fields: [productId], references: [id])
+  quantity          Int
+  unitPriceSnapshot Float   @map("unit_price_snapshot")
+  offerSnapshotJson String? @map("offer_snapshot_json")
+
+  @@map("order_items")
+}
+
+model AuditLog {
+  id           Int      @id @default(autoincrement())
+  userId       Int?     @map("user_id")
+  user         User?    @relation(fields: [userId], references: [id])
+  action       String
+  entityType   String   @map("entity_type")
+  entityId     Int?     @map("entity_id")
+  metadataJson String?  @map("metadata_json")
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  @@map("audit_logs")
+}
