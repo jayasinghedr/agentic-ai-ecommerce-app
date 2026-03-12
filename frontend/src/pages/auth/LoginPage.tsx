@@ -110,13 +110,6 @@ export default function LoginPage() {
               Register
             </Link>
           </p>
-
-          {/* Demo credentials hint */}
-          <div className="mt-4 p-3 bg-brand-light rounded-lg text-xs text-brand-dark/70 space-y-1">
-            <p className="font-semibold">Demo accounts:</p>
-            <p>Admin: <span className="font-mono">admin@nexagear.com</span> / admin123</p>
-            <p>Customer: <span className="font-mono">john@example.com</span> / customer123</p>
-          </div>
         </div>
       </div>
     </div>
