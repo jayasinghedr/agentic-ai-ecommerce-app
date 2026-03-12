@@ -73,10 +73,12 @@ app.get('/api/health', (_req, res) => {
 app.use(errorHandler);
 
 // ── Start server ───────────────────────────────────────────────────────────
-app.listen(config.port, () => {
-  console.log(`🚀 Server running on http://localhost:${config.port}`);
-  console.log(`📚 API Docs:   http://localhost:${config.port}/api/docs`);
-  console.log(`⚡ Environment: ${config.nodeEnv}`);
-});
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(config.port, () => {
+    console.log(`🚀 Server running on http://localhost:${config.port}`);
+    console.log(`📚 API Docs:   http://localhost:${config.port}/api/docs`);
+    console.log(`⚡ Environment: ${config.nodeEnv}`);
+  });
+}
 
 export default app;
